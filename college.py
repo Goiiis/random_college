@@ -23,15 +23,13 @@ def show():
     except:
         my_label2.config(text="please use numbers")
     rows = cursor.execute("SELECT name FROM colleges WHERE rank BETWEEN ? AND ? ORDER BY rank", (int(ans), int(ans2))).fetchall()
-    print(random.choice(rows))
-    print(random.choice(rows)[0].split(" "))
     urls = ""
     for word in random.choice(rows)[0].split(" "):
         urls += word
         urls += "+"
     webbrowser.open(f'https://www.google.com/search?q={urls}')
     my_label2.config(text=rows)
-    
+    S
 
 labl = tk.Label(window, text="insert rank ceiling:")
 labl.pack(pady=0)
